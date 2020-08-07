@@ -78,7 +78,6 @@ class Dog
     dog
 	end
 
-  end
 
   def self.update
     sql = "UPDATE dogs SET name = ?, breed = ?  WHERE id = ?"
