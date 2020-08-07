@@ -29,10 +29,12 @@ class Dog
   def save
     sql <<-SQL
       INSERT INTO dogs
-      VALUES (?, ?)
+      VALUES (name, breed)
       name = ?
       breed = ?
     SQL
+
+    DB[:conn].execute(sql)
   end
 
 end
